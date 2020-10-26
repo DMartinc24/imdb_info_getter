@@ -16,15 +16,12 @@ public class Main {
     private static String QUOTE_HYPERLINK = "//a[@class='quicklink' and contains(text(),'Quotes')]";
     private static String QUOTE_COUNTER = "//div[@class='ipl-itemcount-header']";
     private static String QUOTE_RESULTS = "//div[@class='sodatext']";
-    private static String RANDOM_QUOTE = "//div[@id='qt1535701']";
+    private static String A_QUOTE = "//div[@id='qt1535701']";
 
     public static void main(String[] args) {
 
        open("https://www.imdb.com/");
 
-      /* $x("/html/body/div[1]/nav").$x("sc-gzVnrw sVyDb navbar__flyout--breakpoint-m navbar__flyout--positionLeft").click();
-       $$(By.className("ipc-list__item _1xTnkpad08eEWkqotpqi4r")).shouldHaveSize(7);
-       $(By.className("ipc-icon ipc-icon--television _37fcCRzERfyeXeLFPsjHdY")).click();*/
        $(By.name("q")).setValue("Sex and the city");
        $(By.xpath("/html/body/div[1]/nav/div[2]/div[1]/form/div[2]/div/div/div/ul/li[1]/a/div[1]")).click();
        $x(MORE_LOCATOR).shouldBe(visible).click();
@@ -32,7 +29,7 @@ public class Main {
        $x(QUOTE_HYPERLINK).click();
        $x(QUOTE_COUNTER).shouldBe(visible);
        $$x(QUOTE_RESULTS).shouldHave(CollectionCondition.sizeGreaterThan(0));
-       String quote = $x(RANDOM_QUOTE).shouldBe(visible).getText();
+       String quote = $x(A_QUOTE).shouldBe(visible).getText();
 
        System.out.println(quote);
 
