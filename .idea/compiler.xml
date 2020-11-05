@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Selenide_Learning" />
+        <module name="imdb_sex-and-the-city" />
       </profile>
     </annotationProcessing>
   </component>
