@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="imdb_info_getter" />
         <module name="Selenide_Learning" />
         <module name="imdb_sex-and-the-city" />
       </profile>

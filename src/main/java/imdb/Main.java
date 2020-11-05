@@ -19,7 +19,6 @@ public class Main {
     private static String quote;
     private static String director;
     private static String review;
-   // private static String value;
 
     private static Scanner scanner = new Scanner(System.in);
 
